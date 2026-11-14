@@ -523,11 +523,16 @@ st.markdown(
 with st.sidebar:
     st.subheader("Información del prototipo")
     st.metric("Publicaciones del corpus", len(corpus))
-    st.metric("Precisión experimental", f"{precision * 100:.2f} %")
     st.divider()
     st.caption(
-        "La precisión corresponde al modelo experimental entrenado con el corpus. "
-        "La puntuación discursiva mostrada en la interfaz procede de la rúbrica de indicadores."
+        "Prototipo de investigación orientado a identificar patrones "
+        "lingüísticos asociados a la desinformación. Desarrollado a partir "
+        "de 110 publicaciones."
+    )
+    st.caption(
+        "Complementado con una evaluación inicial exploratoria de "
+        f"clasificación automática ({precision * 100:.2f} % de aciertos), "
+        "como punto de partida para futuras mejoras."
     )
 
 col_entrada, col_resultado = st.columns([1.15, 1], gap="large")
